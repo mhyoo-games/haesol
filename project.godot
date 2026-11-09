@@ -1,0 +1,43 @@
+; Godot 4 프로젝트 설정 (손으로 고쳐도 됨)
+config_version=5
+
+[application]
+
+config/name="해솔국 이야기"
+config/description="해솔국을 무대로 한 2D 탑다운 RPG"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://assets/icon.png"
+boot_splash/bg_color=Color(0.10, 0.07, 0.13, 1)
+boot_splash/show_image=false
+
+[autoload]
+
+DB="*res://scripts/core/db.gd"
+Game="*res://scripts/game.gd"
+Sound="*res://scripts/sound.gd"
+Dev="*res://scripts/dev.gd"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=480
+window/size/window_width_override=1280
+window/size/window_height_override=960
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+window/stretch/scale_mode="integer"
+
+[physics]
+
+2d/default_gravity=0.0
+common/physics_ticks_per_second=60
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
+environment/defaults/default_clear_color=Color(0.10, 0.07, 0.13, 1)

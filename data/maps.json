@@ -1,0 +1,1131 @@
+{
+ "town": {
+  "name": "해솔성",
+  "w": 48,
+  "h": 40,
+  "music": "town",
+  "theme": "",
+  "tint": [
+   1.0,
+   0.97,
+   0.92
+  ],
+  "dark": false,
+  "ground": [
+   "................................................",
+   "................................................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   "........PP.............SS...........PP..........",
+   "........PP.............SS...........PP..........",
+   "........PP.............SS...........PP..........",
+   "........PP.............SS...........PP..........",
+   "........PP..........SSSSSSSS........PP..........",
+   "........PP.........SSSSSSSSSS.......PP..........",
+   "........PP........SSSSSSSSSSSS......PP..........",
+   "..SSSSSSPPSSSSSSSSSSSSSSSSSSSSSSSSSSPPSSSSSSSSSS",
+   "..SSSSSSPPSSPPSSSSSSSSSSSSSSSSSSSSSPPPSSSSSSSSSS",
+   "............PP....SSSSSSSSSSSS.....PP...........",
+   "............PP.....SSSSSSSSSS......PP...........",
+   "............PP......SSSSSSSS.......PP...........",
+   "............PP.........SS..........PP...........",
+   "............PP.........SS..........PP...........",
+   "............PP.........SS..........PP...........",
+   "............PP.........SS..........PP...........",
+   "............PP.........SS..........PP...........",
+   "............PP.........SS..........PP...........",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS.......................",
+   ".......................SS......................."
+  ],
+  "objects": [
+   "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+   "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+   "HH                                            HH",
+   "HH T  M  T  M  T  M  T  M  T  M  T  M  T  M  THH",
+   "HH           t               b                HH",
+   "HH       t                             B      HH",
+   "HH                                            HH",
+   "HH                                            HH",
+   "HH           b                                HH",
+   "HH                                            HH",
+   "HH                                            HH",
+   "HH            t                               HH",
+   "HH  c      jJ                  cc             HH",
+   "HH                                            HH",
+   "HH  b          t               t           t  HH",
+   "HH                                            HH",
+   "HH                 l        l                 HH",
+   "HH    t                                       HH",
+   "HH   l    b                               l     ",
+   "HH                                              ",
+   "HH                                              ",
+   "HH  b                                           ",
+   "HH               B                            HH",
+   "HH                 l        l                 HH",
+   "HH B                                          HH",
+   "HH                                            HH",
+   "HH                                            HH",
+   "HH                                       b    HH",
+   "HH            j     t                  J      HH",
+   "HH                                            HH",
+   "HH              b                             HH",
+   "HH      b                 l                   HH",
+   "HH         b                                 BHH",
+   "HHFfffffffffffffffF                           HH",
+   "HH     t         t   l                        HH",
+   "HH CCCCCCCCCCCCCCCb                           HH",
+   "HH CCCCCCCCCCCCCCC                            HH",
+   "HH CCCCCCCCCCCCCCC                            HH",
+   "HHHHHHHHHHHHHHHHHHHHHH    HHHHHHHHHHHHHHHHHHHHHH",
+   "HHHHHHHHHHHHHHHHHHHHHH    HHHHHHHHHHHHHHHHHHHHHH"
+  ],
+  "entities": [
+   {
+    "type": "gate",
+    "x": 46,
+    "y": 21,
+    "fw": 2,
+    "fh": 4,
+    "face": "east"
+   },
+   {
+    "type": "gate",
+    "x": 22,
+    "y": 39,
+    "fw": 4,
+    "fh": 2,
+    "face": "south"
+   },
+   {
+    "type": "house",
+    "sprite": "hanok_big",
+    "x": 5,
+    "y": 11,
+    "fw": 6,
+    "fh": 4,
+    "name": "주막"
+   },
+   {
+    "type": "house",
+    "sprite": "hanok",
+    "x": 33,
+    "y": 11,
+    "fw": 5,
+    "fh": 4,
+    "name": "대장간"
+   },
+   {
+    "type": "house",
+    "sprite": "hanok",
+    "x": 9,
+    "y": 27,
+    "fw": 5,
+    "fh": 4,
+    "name": "포목점"
+   },
+   {
+    "type": "house",
+    "sprite": "hanok_big",
+    "x": 32,
+    "y": 27,
+    "fw": 6,
+    "fh": 4,
+    "name": "수련관"
+   },
+   {
+    "type": "house",
+    "sprite": "hanok_big",
+    "x": 20,
+    "y": 7,
+    "fw": 6,
+    "fh": 4,
+    "name": "성주 댁"
+   },
+   {
+    "type": "well",
+    "x": 23,
+    "y": 19
+   },
+   {
+    "type": "stall",
+    "sprite": "stall_blue",
+    "x": 14,
+    "y": 17,
+    "fw": 2,
+    "fh": 1
+   },
+   {
+    "type": "stall",
+    "sprite": "stall_red",
+    "x": 17,
+    "y": 17,
+    "fw": 2,
+    "fh": 1
+   },
+   {
+    "type": "stall",
+    "sprite": "stall_blue",
+    "x": 28,
+    "y": 17,
+    "fw": 2,
+    "fh": 1
+   },
+   {
+    "type": "stall",
+    "sprite": "stall_red",
+    "x": 31,
+    "y": 17,
+    "fw": 2,
+    "fh": 1
+   },
+   {
+    "type": "npc",
+    "id": "captain",
+    "x": 44,
+    "y": 18
+   },
+   {
+    "type": "npc",
+    "id": "hana",
+    "x": 8,
+    "y": 13
+   },
+   {
+    "type": "npc",
+    "id": "smith",
+    "x": 36,
+    "y": 13
+   },
+   {
+    "type": "npc",
+    "id": "tailor",
+    "x": 12,
+    "y": 29
+   },
+   {
+    "type": "npc",
+    "id": "elder",
+    "x": 35,
+    "y": 29
+   },
+   {
+    "type": "npc",
+    "id": "m_warrior",
+    "x": 30,
+    "y": 33
+   },
+   {
+    "type": "npc",
+    "id": "m_rogue",
+    "x": 33,
+    "y": 33
+   },
+   {
+    "type": "npc",
+    "id": "m_mage",
+    "x": 36,
+    "y": 33
+   },
+   {
+    "type": "npc",
+    "id": "m_priest",
+    "x": 39,
+    "y": 33
+   },
+   {
+    "type": "npc",
+    "id": "mujin",
+    "x": 26,
+    "y": 36
+   },
+   {
+    "type": "sign",
+    "x": 42,
+    "y": 22,
+    "text": "동문 → 솔내들 (산토끼·청설모·들개)"
+   },
+   {
+    "type": "sign",
+    "x": 26,
+    "y": 35,
+    "text": "남문 → 안개숲 (너구리·불여우)"
+   },
+   {
+    "type": "portal",
+    "x": 47,
+    "y": 18,
+    "w": 1,
+    "h": 4,
+    "to": "field",
+    "tx": 2,
+    "ty": 20
+   },
+   {
+    "type": "portal",
+    "x": 22,
+    "y": 39,
+    "w": 4,
+    "h": 1,
+    "to": "forest",
+    "tx": 24,
+    "ty": 2
+   },
+   {
+    "type": "start",
+    "x": 23,
+    "y": 22
+   }
+  ]
+ },
+ "field": {
+  "name": "솔내들",
+  "w": 54,
+  "h": 42,
+  "music": "field",
+  "theme": "",
+  "tint": [
+   1,
+   1,
+   1
+  ],
+  "dark": false,
+  "ground": [
+   "...........................WWW........................",
+   "...........................WWW........................",
+   "............................WWW.......................",
+   ".............................WWW......................",
+   "......................PP.....WWW......................",
+   "......................PP.....WWW......................",
+   "......................PP.....WWW......................",
+   ".....................PPP.....WWW......................",
+   ".....................PP......WWW......................",
+   ".....................PP.....WWW.......................",
+   ".....................PP....WWW........................",
+   ".....................PP....WWW........................",
+   "....................PPP...WWW.........................",
+   "....................PP...WWW..........................",
+   "....................PPPPPDDDPPPPPPPP..................",
+   "...................PPPPPPDDDPPPPPPPPPP................",
+   ".................PPPP....WWW......PPPPPP..............",
+   "................PPPP.....WWW......PP.PPPP.............",
+   "..............PPPP.......WWW......PP...PPPP...........",
+   ".............PPPP.........WWW.....PP....PPPPP.........",
+   "PPPPPPPPPPPPPPP............WWW....PPP.....PPPPPPPPPPPP",
+   "PPPPPPPPPPPPPP.............WWW.....PP.......PPPPPPPPPP",
+   "...........................WWW.....PP.................",
+   "............................WWW....PP.................",
+   ".............................WWW...PP.................",
+   ".............................WWW...PP.................",
+   ".............................WWW...PP.................",
+   ".............................WWW...PP.................",
+   ".............................WWW...PP.................",
+   "............................WWW....PPP................",
+   "............................WWW.....PP................",
+   "...........................WWW......PP................",
+   "...........................WWW......PP................",
+   "..........................WWW.......PP................",
+   ".........................DDD........PP................",
+   ".........................DDD........PP................",
+   ".........................WWW..........................",
+   ".........................WWW..........................",
+   ".........................WWW..........................",
+   ".........................WWW..........................",
+   "..........................WWW.........................",
+   "...........................WWW........................"
+  ],
+  "objects": [
+   "tTNNNNtNTNNNNNTNNNNTNNNTNTtNTNtTNTtNNNTNNtNNttTTTNtNtN",
+   "t#N#N#N#T#t#T#N#N#N#N#t#t#t#N#N#N#N#t#N#N#N#t#N#t#N#tN",
+   "Nt  B                                               #T",
+   "N#                 b                                NN",
+   "Tt                                                  #T",
+   "T#                b                                 NN",
+   "NN                                M                 #T",
+   "N#      r         b                       b         Nt",
+   "TN              t                                   #t",
+   "N#                                                  tN",
+   "TT                 r                                #N",
+   "T#       t                                          TT",
+   "TN       b                                          #N",
+   "T#  rr                            b                 tt",
+   "NT           b                       B              #N",
+   "t#                                                  tT",
+   "NN       r  t                           b           #N",
+   "N#                                          t  b    NN",
+   "NN         t                 r                      #N",
+   "       r          r                                 NT",
+   "                                                    #N",
+   "               t     b                              TN",
+   "                                              r     #T",
+   "N#bM                      M             T        T  tN",
+   "NN            M    B            T                   #T",
+   "N#                                           T tM   tN",
+   "NT                                            T     #N",
+   "T#                                t                 tt",
+   "tN  fffffffffff        M             b T         T  #N",
+   "N#          t                                   T   NN",
+   "NN   CCCCCCCCC      b      t          T         T   #t",
+   "N#   CCCCCCCCC                                      TN",
+   "tt   CCCCCCCCC                    B           T     #N",
+   "T#   CCCCCCCCC                        r             NT",
+   "tT B CCCCCCCCC                                      #N",
+   "t#  b                                               Nt",
+   "tT  fffffffffff                                     #t",
+   "T#                                               T  tT",
+   "TT                                 T          T    T#N",
+   "T#                                            T     TN",
+   "tN#N#t#N#t#T#t#N#t#t#N#T#N#T#N#T#t#T#N#N#N#t#N#N#N#T#N",
+   "TNtNNNNNTTTNTNTNtTTNNNTNTTNtTtTttNTNtNNTTNNTNTTTNNNtNN"
+  ],
+  "entities": [
+   {
+    "type": "portal",
+    "x": 0,
+    "y": 19,
+    "w": 1,
+    "h": 4,
+    "to": "town",
+    "tx": 45,
+    "ty": 20
+   },
+   {
+    "type": "sign",
+    "x": 4,
+    "y": 18,
+    "text": "← 해솔성 동문"
+   },
+   {
+    "type": "spawn",
+    "mon": "rabbit",
+    "area": [
+     3,
+     22,
+     20,
+     38
+    ],
+    "n": 8
+   },
+   {
+    "type": "spawn",
+    "mon": "squirrel",
+    "area": [
+     36,
+     22,
+     50,
+     38
+    ],
+    "n": 7
+   },
+   {
+    "type": "spawn",
+    "mon": "dog",
+    "area": [
+     30,
+     3,
+     50,
+     12
+    ],
+    "n": 7
+   },
+   {
+    "type": "spawn",
+    "mon": "rabbit",
+    "area": [
+     6,
+     4,
+     18,
+     14
+    ],
+    "n": 4
+   }
+  ]
+ },
+ "forest": {
+  "name": "안개숲",
+  "w": 54,
+  "h": 44,
+  "music": "forest",
+  "theme": "forest",
+  "tint": [
+   0.86,
+   0.92,
+   0.9
+  ],
+  "dark": false,
+  "ground": [
+   "........................PP............................",
+   "........................PP............................",
+   "........................PP............................",
+   "........................PP............................",
+   "........................PP............................",
+   "........................PP............................",
+   "........................PP............................",
+   "........................PP............................",
+   "........................PP............................",
+   "........................PP............................",
+   "........................PPPPPP........................",
+   ".......................PPPPPPPPPPPPPP.................",
+   "......................PPP....PPPPPPPPPPPPP............",
+   ".....................PPP............PPPPPP............",
+   "....................PPP.................PPP...........",
+   "...................PPP...................PPP..........",
+   "..................PPP.....................PP..........",
+   ".................PPP......................PP..........",
+   "................PPP.......................PPP.........",
+   "...............PPP.........................PPP........",
+   "..............PPP...........................PP........",
+   "..............PP............................PP........",
+   "..............PPP.....................................",
+   "...............PPP....................................",
+   "................PP....................................",
+   "................PP....................................",
+   "................PPP.............................PPPPPP",
+   ".................PPP..........................PPPPPPPP",
+   "..................PP.........................PPPP.....",
+   "..................PP.......................PPPP.......",
+   "..................PPP.....................PPPP........",
+   "...................PPP..................PPPP..........",
+   "....................PPPPPP.............PPPP...........",
+   ".........WWWWWWW....PPPPPPPPPPPPP....PPPP.............",
+   ".......WWWWWWWWWWW.......PPPPPPPPPPPPPPP..............",
+   ".......WWWWWWWWWWW..............PPPPPP................",
+   ".......WWWWWWWWWWW....................................",
+   ".......WWWWWWWWWWW....................................",
+   ".......WWWWWWWWWW.....................................",
+   ".........WWWWWWW......................................",
+   "......................................................",
+   "......................................................",
+   "......................................................",
+   "......................................................"
+  ],
+  "objects": [
+   "ttKNNNKKtNKKNNKKtNKKKNt    tKKKNNtNNKNKKtttKNttKtNKKKt",
+   "K#K#K#K#t#N#t#N#K#K#N#K    #N#N#K#K#N#N#t#K#N#K#N#K#tK",
+   "KKK#t#K#N#K#N#K#t#N#t#K    #N#K#N#N#t#K#t#K#t#K#K#t##t",
+   "t##N b  b                  t                     K tNt",
+   "KKK       N                               K  b     ##K",
+   "K##              r                   K   K b     K KKN",
+   "NNK                       N                 t      ##K",
+   "t##       b  K                           K         KtK",
+   "tKN         K                                 K    ##K",
+   "K##                                                KNt",
+   "tKt b                                              ##t",
+   "K##  K                                             tKt",
+   "KKK   b                                            ##K",
+   "K##                                                ttK",
+   "tKt        b                                    t N##t",
+   "K##                            t               N   KKt",
+   "NKN                             b                  ##N",
+   "K##K                                             K Ktt",
+   "KNK t                          b             b    t##K",
+   "N##                        t       t               tKN",
+   "tKt                   r       r                    ##t",
+   "N##              K N       K         K             KKt",
+   "NKt              b b                  K            ##t",
+   "t##                              N                 ttK",
+   "KNK                   K             b t b          ##t",
+   "t##      b                                  r         ",
+   "KNK                                           N       ",
+   "K##          N t       K     N       t     N          ",
+   "NtK                         b   b                     ",
+   "t##                                       r        NtN",
+   "KtK                                                ##t",
+   "N##            K                     b          b  KtK",
+   "tKK                                   N           K##t",
+   "K##              N                                 NNt",
+   "NNt                                                ##K",
+   "K##                                    K           KNK",
+   "NNt                                   K      r     ##N",
+   "K##                          r         K           ttN",
+   "tKK                                                ##K",
+   "t##                                       r  K     ttK",
+   "NNt         K     N           K   t                ##K",
+   "K##K#N#K#N#K#t#N#K#N#K#N#t#t#K#N#K#K#K#K#K#K#K#K#N#KtK",
+   "KN#N#K#N#N#N#K#t#N#K#t#N#N#K#K#N#K#N#t#t#K#K#K#t#N#N#K",
+   "NKtNKKtKKKKNKNttKKtKKNKKNKtNKKNKNKKNNNKKNNtKNKKKKtKNtK"
+  ],
+  "entities": [
+   {
+    "type": "portal",
+    "x": 23,
+    "y": 0,
+    "w": 4,
+    "h": 1,
+    "to": "town",
+    "tx": 23,
+    "ty": 37
+   },
+   {
+    "type": "portal",
+    "x": 53,
+    "y": 25,
+    "w": 1,
+    "h": 4,
+    "to": "cave1",
+    "tx": 2,
+    "ty": 16
+   },
+   {
+    "type": "sign",
+    "x": 49,
+    "y": 24,
+    "text": "→ 멧쥐굴 (위험!)"
+   },
+   {
+    "type": "npc",
+    "id": "woodcutter",
+    "x": 40,
+    "y": 14
+   },
+   {
+    "type": "spawn",
+    "mon": "raccoon",
+    "area": [
+     4,
+     4,
+     22,
+     18
+    ],
+    "n": 8
+   },
+   {
+    "type": "spawn",
+    "mon": "fox",
+    "area": [
+     26,
+     18,
+     48,
+     40
+    ],
+    "n": 9
+   },
+   {
+    "type": "spawn",
+    "mon": "raccoon",
+    "area": [
+     30,
+     4,
+     48,
+     12
+    ],
+    "n": 4
+   }
+  ]
+ },
+ "cave1": {
+  "name": "멧쥐굴 1층",
+  "w": 44,
+  "h": 34,
+  "music": "cave",
+  "theme": "cave",
+  "tint": [
+   0.62,
+   0.6,
+   0.72
+  ],
+  "dark": true,
+  "ground": [
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................"
+  ],
+  "objects": [
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     XXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX       XX",
+   "XXXXXXXXXXXX      XXXXXXXXXXXXXXXXX       XX",
+   "XXXXXXXXXXX        XXXXXXXXXXXXXXXX       XX",
+   "XXXXXXXXXXX         XXXXXXXXXXXXXXX       XX",
+   "XXXXXXXXXXX                    XXXX       XX",
+   "XXXXXXXXXXX                    XXXXX     XXX",
+   "XXXXXXXXXXXX                    XXXXXX   XXX",
+   "XXXXXXXXXXXX       XXXXX         XXXXX   XXX",
+   "XXX     XXXXXXX   XXXXX           XXXX   XXX",
+   "         XXXXXX   XXXXX           XXXX   XXX",
+   "                   XXXX                  XXX",
+   "                   XXXX                  XXX",
+   "XX                 XXXX                  XXX",
+   "XXXXXXXXXXXXXXXX   XXXXX         XXXXX   XXX",
+   "XXXXXXXXXXXXXXXX   XXXXXX       XXXXXX   XXX",
+   "XXXXXXXXXXXXX       XXXXXXXX   XXXXXXX   XXX",
+   "XXXXXXXXXXXX         XXXXXXX   XXXXXXX   XXX",
+   "XXXXXXXXXXXX         XXXXXXX   XXXXX     XXX",
+   "XXXXXXXXXXXX                   XXXX       XX",
+   "XXXXXXXXXXXX                   XXXX       XX",
+   "XXXXXXXXXXXX                   XXXX        X",
+   "XXXXXXXXXXXXXX     XXXXXXXXXXXXXXXX        X",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX        X",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     XXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+  ],
+  "entities": [
+   {
+    "type": "portal",
+    "x": 0,
+    "y": 15,
+    "w": 1,
+    "h": 3,
+    "to": "forest",
+    "tx": 51,
+    "ty": 26,
+    "cx": 4,
+    "cy": 16
+   },
+   {
+    "type": "portal",
+    "x": 40,
+    "y": 26,
+    "w": 2,
+    "h": 2,
+    "to": "cave2",
+    "tx": 4,
+    "ty": 26,
+    "kind": "down"
+   },
+   {
+    "type": "spawn",
+    "mon": "rat",
+    "area": [
+     10,
+     6,
+     34,
+     28
+    ],
+    "n": 10
+   },
+   {
+    "type": "spawn",
+    "mon": "bat",
+    "area": [
+     24,
+     4,
+     42,
+     30
+    ],
+    "n": 6
+   },
+   {
+    "type": "torch",
+    "x": 6,
+    "y": 14
+   },
+   {
+    "type": "torch",
+    "x": 15,
+    "y": 7
+   },
+   {
+    "type": "torch",
+    "x": 28,
+    "y": 12
+   },
+   {
+    "type": "torch",
+    "x": 38,
+    "y": 6
+   },
+   {
+    "type": "torch",
+    "x": 38,
+    "y": 24
+   },
+   {
+    "type": "torch",
+    "x": 16,
+    "y": 21
+   }
+  ]
+ },
+ "cave2": {
+  "name": "멧쥐굴 2층",
+  "w": 44,
+  "h": 34,
+  "music": "cave",
+  "theme": "cave",
+  "tint": [
+   0.62,
+   0.6,
+   0.72
+  ],
+  "dark": true,
+  "ground": [
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................",
+   "............................................"
+  ],
+  "objects": [
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   XXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   XXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   XXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   XXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    XXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXX        XXXXXXXXX",
+   "XXXXXXXXX      XXXXXXXXX             XXXXXXX",
+   "XXXXXXXX        XXXXXXX              XXXXXXX",
+   "XXXXXXXX         XXXXXX               XXXXXX",
+   "XXXXXXXX                              XXXXXX",
+   "XXXXXXXX                              XXXXXX",
+   "XXXXXXXXX                             XXXXXX",
+   "XXXXXXXXX       XXXXXXXX             XXXXXXX",
+   "XXXXXXXXXXXX   XXXXXXXXXXX         XXXXXXXXX",
+   "XXXXXXXXXXXX   XXXXXXXXXXXXXXX   XXXXXXXXXXX",
+   "XXXXXXXXXXXX   XXXXXXXXXXXXXXX   XXXXXXXXXXX",
+   "XXXXXXXXXXXX   XXXXXXXXXXXXXXX   XXXXXXXXXXX",
+   "XXXXXXXXXXXX       XXXXXXXXXXX   XXXXXX   XX",
+   "XXXXXXXXXXXX         XXXXXXXXX   XXXXX     X",
+   "XXXXXXXXXXXX         XXXXXXXXX   XXXXX     X",
+   "XXXXXXXXXXXX                     XXXXX     X",
+   "XXXXXXXXXXXX                     XXXXX     X",
+   "XXXXXXXXXXXX                     XXXXX     X",
+   "XXXXXXXXXXXXX       XXXX         XXXXXX    X",
+   "XXXX     XXXXXXX   XXXXX                   X",
+   "XXX       XXXXXX   XXXXX                   X",
+   "XXX                XXXXX                   X",
+   "XXX                XXXXXX       XXXXXXXXXXXX",
+   "XXX                XXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXX   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+   "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+  ],
+  "entities": [
+   {
+    "type": "portal",
+    "x": 3,
+    "y": 27,
+    "w": 2,
+    "h": 2,
+    "to": "cave1",
+    "tx": 39,
+    "ty": 24,
+    "kind": "up"
+   },
+   {
+    "type": "portal",
+    "x": 30,
+    "y": 0,
+    "w": 3,
+    "h": 1,
+    "to": "camp",
+    "tx": 20,
+    "ty": 31,
+    "need": "done:q_cave",
+    "cx": 31,
+    "cy": 6
+   },
+   {
+    "type": "boss",
+    "mon": "ratking",
+    "x": 30,
+    "y": 10
+   },
+   {
+    "type": "spawn",
+    "mon": "rat",
+    "area": [
+     10,
+     14,
+     34,
+     30
+    ],
+    "n": 10
+   },
+   {
+    "type": "spawn",
+    "mon": "bat",
+    "area": [
+     8,
+     4,
+     22,
+     14
+    ],
+    "n": 6
+   },
+   {
+    "type": "torch",
+    "x": 6,
+    "y": 23
+   },
+   {
+    "type": "torch",
+    "x": 16,
+    "y": 17
+   },
+   {
+    "type": "torch",
+    "x": 12,
+    "y": 6
+   },
+   {
+    "type": "torch",
+    "x": 24,
+    "y": 7
+   },
+   {
+    "type": "torch",
+    "x": 36,
+    "y": 7
+   },
+   {
+    "type": "torch",
+    "x": 28,
+    "y": 21
+   }
+  ]
+ },
+ "camp": {
+  "name": "흑풍단 소굴",
+  "w": 42,
+  "h": 34,
+  "music": "boss",
+  "theme": "",
+  "tint": [
+   0.8,
+   0.74,
+   0.74
+  ],
+  "dark": false,
+  "ground": [
+   "..........................................",
+   "..........................................",
+   "..........................................",
+   "..........................................",
+   "..........................................",
+   "................PPPPPPPPPPPP..............",
+   ".............PPPPPPPPPPPPPPPPP............",
+   "............PPPPPPPPPPPPPPPPPPPP..........",
+   "..........PPPPPPPPPPPPPPPPPPPPPPP.........",
+   ".........PPPPPPPPPPPPPPPPPPPPPPPPP........",
+   ".........PPPPPPPPPPPPPPPPPPPPPPPPPP.......",
+   "........PPPPPPPPPPPPPPPPPPPPPPPPPPP.......",
+   ".......PPPPPPPPPPPPPPPPPPPPPPPPPPPPP......",
+   ".......PPPPPPPPPPPPPPPPPPPPPPPPPPPPP......",
+   ".......PPPPPPPPPPPPPPPPPPPPPPPPPPPPP......",
+   ".......PPPPPPPPPPPPPPPPPPPPPPPPPPPPP......",
+   ".......PPPPPPPPPPPPPPPPPPPPPPPPPPPPP......",
+   ".......PPPPPPPPPPPPPPPPPPPPPPPPPPPPP......",
+   ".......PPPPPPPPPPPPPPPPPPPPPPPPPPPPP......",
+   "........PPPPPPPPPPPPPPPPPPPPPPPPPPP.......",
+   "........PPPPPPPPPPPPPPPPPPPPPPPPPP........",
+   ".........PPPPPPPPPPPPPPPPPPPPPPPPP........",
+   "..........PPPPPPPPPPPPPPPPPPPPPPP.........",
+   "............PPPPPPPPPPPPPPPPPPPP..........",
+   ".............PPPPPPPPPPPPPPPP.............",
+   "................PPPPPPPPPPPP..............",
+   "..........................................",
+   "..........................................",
+   "..........................................",
+   "..........................................",
+   "..........................................",
+   "..........................................",
+   "..........................................",
+   ".........................................."
+  ],
+  "objects": [
+   "KKNNNNNNtNNNKtNKNtNtNNKKNKNtNKttNNKNtNNttN",
+   "t#N#N#N#t#N#N#N#N#t#N#N#N#N#N#N#N#t#N#t#KN",
+   "KNt#N#K#t#N#t#N#t#N#t#N#K#t#N#N#t#K#N#K##K",
+   "N##                                    KKN",
+   "tKN                                    ##N",
+   "N##                                    KtN",
+   "KKN   c j                        j  c  ##t",
+   "N##      j                          c  tKt",
+   "tKK                                    ##N",
+   "N##                                    KtK",
+   "Ktt                                    ##N",
+   "K##                                    KtN",
+   "tNN                                    ##K",
+   "t##                                    KtN",
+   "KNt                                    ##N",
+   "N##                                    KNK",
+   "tKN                                    ##K",
+   "N##                                    NKN",
+   "NtN                                    ##N",
+   "K##                                    NNN",
+   "KNt                                j   ##t",
+   "N##                                    Ntt",
+   "NKt                                    ##N",
+   "N##                                    KNN",
+   "KNN                           c        ##N",
+   "N##    c                               NNK",
+   "NNN                                    ##K",
+   "N##   kkkkkkkkkkkk      kkkkkkkkkkkkk  NNK",
+   "tKt                                    ##N",
+   "t##                                    NKt",
+   "KKK                                    ##N",
+   "K##t#N#K#N#N#N#N#K#    N#N#K#N#t#N#N#N#tNK",
+   "tN#N#N#K#K#N#K#K#K#    N#t#N#t#K#N#t#t#N#K",
+   "KtNNNtKNNtNNNtKNNtt    KKKtKKNtNtKttNKNtKN"
+  ],
+  "entities": [
+   {
+    "type": "portal",
+    "x": 19,
+    "y": 33,
+    "w": 4,
+    "h": 1,
+    "to": "cave2",
+    "tx": 31,
+    "ty": 2
+   },
+   {
+    "type": "tent",
+    "x": 10,
+    "y": 10,
+    "fw": 2,
+    "fh": 1
+   },
+   {
+    "type": "tent",
+    "x": 30,
+    "y": 10,
+    "fw": 2,
+    "fh": 1
+   },
+   {
+    "type": "tent",
+    "x": 12,
+    "y": 20,
+    "fw": 2,
+    "fh": 1
+   },
+   {
+    "type": "tent",
+    "x": 30,
+    "y": 21,
+    "fw": 2,
+    "fh": 1
+   },
+   {
+    "type": "campfire",
+    "x": 16,
+    "y": 15
+   },
+   {
+    "type": "campfire",
+    "x": 26,
+    "y": 15
+   },
+   {
+    "type": "campfire",
+    "x": 21,
+    "y": 22
+   },
+   {
+    "type": "npc",
+    "id": "captive",
+    "x": 8,
+    "y": 22
+   },
+   {
+    "type": "npc",
+    "id": "mujin",
+    "x": 24,
+    "y": 29
+   },
+   {
+    "type": "spawn",
+    "mon": "bandit",
+    "area": [
+     8,
+     6,
+     34,
+     25
+    ],
+    "n": 9
+   },
+   {
+    "type": "boss",
+    "mon": "chief",
+    "x": 21,
+    "y": 7
+   }
+  ]
+ }
+}

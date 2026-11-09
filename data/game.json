@@ -1,0 +1,65 @@
+{
+ "jobs": {
+  "none":   {"name": "백성", "hp": 50, "mp": 10, "hp_lv": 12, "mp_lv": 4, "atk": 4, "atk_lv": 1.2, "def": 1, "def_lv": 0.5, "speed": 0.42, "weapon": "club", "outfit": "commoner"},
+  "warrior":{"name": "검사", "hp": 80, "mp": 20, "hp_lv": 22, "mp_lv": 4, "atk": 7, "atk_lv": 2.2, "def": 3, "def_lv": 1.2, "speed": 0.45, "weapon": "sword", "outfit": "warrior", "desc": "튼튼한 몸과 무거운 칼. 앞에서 버티며 둘레를 베어 낸다."},
+  "rogue":  {"name": "자객", "hp": 65, "mp": 25, "hp_lv": 16, "mp_lv": 5, "atk": 6, "atk_lv": 2.0, "def": 2, "def_lv": 0.8, "speed": 0.3, "weapon": "dagger", "outfit": "rogue", "desc": "빠른 단검과 표창. 재빨리 치고 빠진다."},
+  "mage":   {"name": "술사", "hp": 50, "mp": 60, "hp_lv": 11, "mp_lv": 12, "atk": 3, "atk_lv": 0.8, "def": 1, "def_lv": 0.5, "matk": 8, "matk_lv": 2.6, "speed": 0.5, "weapon": "staff", "outfit": "mage", "desc": "불과 얼음과 번개. 멀리서 강하게 친다."},
+  "priest": {"name": "도인", "hp": 60, "mp": 50, "hp_lv": 14, "mp_lv": 10, "atk": 4, "atk_lv": 1.2, "def": 2, "def_lv": 0.9, "matk": 6, "matk_lv": 2.0, "speed": 0.45, "weapon": "bell", "outfit": "priest", "desc": "다친 몸을 낫게 하고 기운으로 지킨다. 오래 버틴다."}
+ },
+ "skills": {
+  "whirl":   {"job": "warrior", "lv": 5,  "name": "회오리베기", "mp": 8,  "cd": 2.5, "kind": "around", "power": 1.3, "desc": "둘레 여덟 칸을 한 번에 벤다"},
+  "rush":    {"job": "warrior", "lv": 9,  "name": "돌격", "mp": 10, "cd": 5.0, "kind": "dash", "range": 4, "power": 1.6, "desc": "앞으로 네 칸 달려가며 부딪힌 적을 친다"},
+  "roar":    {"job": "warrior", "lv": 13, "name": "기합", "mp": 15, "cd": 20, "kind": "buff", "stat": "atk", "amount": 0.4, "time": 15, "desc": "15초 동안 공격력 40% 오름"},
+  "triple":  {"job": "rogue", "lv": 5,  "name": "삼연격", "mp": 7,  "cd": 2.0, "kind": "front", "hits": 3, "power": 0.7, "desc": "앞의 적을 세 번 빠르게 찌른다"},
+  "star":    {"job": "rogue", "lv": 9,  "name": "표창", "mp": 6,  "cd": 1.2, "kind": "line", "range": 6, "power": 1.1, "desc": "보는 쪽 여섯 칸 안의 첫 적에게 표창을 던진다"},
+  "shadow":  {"job": "rogue", "lv": 13, "name": "그림자걸음", "mp": 14, "cd": 8, "kind": "blink", "range": 6, "power": 2.0, "desc": "가까운 적 뒤로 순식간에 옮겨가 급소를 찌른다"},
+  "fire":    {"job": "mage", "lv": 5,  "name": "불꽃", "mp": 6,  "cd": 0.9, "kind": "target", "range": 7, "power": 1.4, "magic": true, "desc": "가까운 적 하나에게 불꽃을 날린다"},
+  "ice":     {"job": "mage", "lv": 9,  "name": "얼음가시", "mp": 10, "cd": 3.0, "kind": "target", "range": 7, "power": 1.2, "slow": 3, "magic": true, "desc": "적을 찌르고 3초 동안 느리게 만든다"},
+  "thunder": {"job": "mage", "lv": 13, "name": "벼락", "mp": 20, "cd": 6.0, "kind": "area", "range": 7, "radius": 1, "power": 1.8, "magic": true, "desc": "적과 그 둘레 아홉 칸에 벼락을 내린다"},
+  "heal":    {"job": "priest", "lv": 5,  "name": "치유", "mp": 8,  "cd": 1.5, "kind": "heal", "power": 2.2, "desc": "기운으로 체력을 되찾는다"},
+  "orb":     {"job": "priest", "lv": 9,  "name": "정기탄", "mp": 7,  "cd": 1.2, "kind": "target", "range": 6, "power": 1.2, "magic": true, "desc": "맑은 기운 덩이를 날린다"},
+  "guard":   {"job": "priest", "lv": 13, "name": "수호", "mp": 16, "cd": 25, "kind": "buff", "stat": "def", "amount": 0.8, "time": 20, "desc": "20초 동안 방어력 80% 오름"}
+ },
+ "items": {
+  "riceball": {"name": "주먹밥", "type": "use", "hp": 40, "price": 6, "desc": "체력 40 회복"},
+  "pill":     {"name": "약초환", "type": "use", "hp": 120, "price": 25, "desc": "체력 120 회복"},
+  "tea":      {"name": "기력차", "type": "use", "mp": 40, "price": 12, "desc": "기력 40 회복"},
+  "club0":    {"name": "몽둥이", "type": "weapon", "atk": 2, "price": 10, "look": "club"},
+  "sword1":   {"name": "무쇠검", "type": "weapon", "atk": 6, "job": "warrior", "lv": 5, "price": 0, "look": "sword"},
+  "sword2":   {"name": "청강검", "type": "weapon", "atk": 12, "job": "warrior", "lv": 10, "price": 260, "look": "sword"},
+  "dagger1":  {"name": "비수", "type": "weapon", "atk": 5, "job": "rogue", "lv": 5, "price": 0, "look": "dagger"},
+  "dagger2":  {"name": "쌍비수", "type": "weapon", "atk": 11, "job": "rogue", "lv": 10, "price": 260, "look": "dagger"},
+  "staff1":   {"name": "버들 지팡이", "type": "weapon", "atk": 2, "matk": 5, "job": "mage", "lv": 5, "price": 0, "look": "staff"},
+  "staff2":   {"name": "청옥 지팡이", "type": "weapon", "atk": 3, "matk": 11, "job": "mage", "lv": 10, "price": 260, "look": "staff"},
+  "bell1":    {"name": "놋방울", "type": "weapon", "atk": 3, "matk": 4, "job": "priest", "lv": 5, "price": 0, "look": "bell"},
+  "bell2":    {"name": "은방울", "type": "weapon", "atk": 5, "matk": 9, "job": "priest", "lv": 10, "price": 260, "look": "bell"},
+  "cap":      {"name": "가죽 두건", "type": "head", "def": 2, "price": 30},
+  "vest":     {"name": "누비 조끼", "type": "body", "def": 4, "price": 60},
+  "armor":    {"name": "비늘 갑옷", "type": "body", "def": 9, "lv": 10, "price": 300},
+  "ring":     {"name": "옥가락지", "type": "acc", "def": 1, "hp": 30, "price": 120},
+  "tail":     {"name": "다람쥐 꼬리", "type": "etc", "price": 3},
+  "pelt":     {"name": "들개 가죽", "type": "etc", "price": 6},
+  "fang":     {"name": "여우 송곳니", "type": "etc", "price": 9},
+  "ratfur":   {"name": "멧쥐 털", "type": "etc", "price": 5},
+  "blackcloth": {"name": "검은 천 조각", "type": "quest", "price": 0, "desc": "검은 바람 무늬가 수놓여 있다"},
+  "map":      {"name": "흑풍단 지도", "type": "quest", "price": 0, "desc": "굴 너머 산적 소굴이 그려져 있다"},
+  "blackjade":{"name": "흑옥 조각", "type": "quest", "price": 0, "desc": "차갑게 검은 안개가 스며 나온다"}
+ },
+ "monsters": {
+  "rabbit":  {"name": "산토끼", "lv": 1, "hp": 22, "atk": 3, "def": 0, "exp": 6, "gold": [0, 2], "ai": "passive", "speed": 0.55, "drops": [["riceball", 0.08]]},
+  "squirrel":{"name": "청설모", "lv": 2, "hp": 30, "atk": 4, "def": 1, "exp": 9, "gold": [1, 3], "ai": "passive", "speed": 0.4, "drops": [["tail", 0.6], ["riceball", 0.06]]},
+  "dog":     {"name": "들개", "lv": 4, "hp": 55, "atk": 9, "def": 2, "exp": 18, "gold": [2, 6], "ai": "aggro", "sight": 4, "speed": 0.45, "drops": [["pelt", 0.4], ["riceball", 0.1], ["blackcloth", 0.25, "q_dogs"]]},
+  "raccoon": {"name": "너구리", "lv": 6, "hp": 80, "atk": 13, "def": 4, "exp": 30, "gold": [3, 8], "ai": "passive", "speed": 0.5, "drops": [["riceball", 0.12], ["cap", 0.03]]},
+  "fox":     {"name": "불여우", "lv": 8, "hp": 105, "atk": 18, "def": 5, "exp": 44, "gold": [4, 10], "ai": "aggro", "sight": 5, "speed": 0.35, "drops": [["fang", 0.4], ["pill", 0.06], ["ring", 0.02]]},
+  "rat":     {"name": "멧쥐", "lv": 9, "hp": 120, "atk": 20, "def": 7, "exp": 52, "gold": [4, 11], "ai": "aggro", "sight": 5, "speed": 0.38, "drops": [["ratfur", 0.45], ["pill", 0.06]]},
+  "bat":     {"name": "굴박쥐", "lv": 11, "hp": 110, "atk": 25, "def": 5, "exp": 64, "gold": [5, 12], "ai": "aggro", "sight": 6, "speed": 0.28, "fly": true, "drops": [["tea", 0.12]]},
+  "ratking": {"name": "왕멧쥐", "lv": 14, "hp": 900, "atk": 34, "def": 10, "exp": 600, "gold": [80, 120], "ai": "aggro", "sight": 7, "speed": 0.4, "boss": true, "big": true, "drops": [["map", 1.0, "q_cave"], ["armor", 0.3], ["pill", 1.0]]},
+  "bandit":  {"name": "흑풍단 졸개", "lv": 13, "hp": 190, "atk": 32, "def": 11, "exp": 90, "gold": [8, 20], "ai": "aggro", "sight": 6, "speed": 0.4, "human": true, "drops": [["pill", 0.1], ["vest", 0.04], ["tea", 0.1]]},
+  "chief":   {"name": "흑풍", "lv": 18, "hp": 2400, "atk": 46, "def": 16, "exp": 1800, "gold": [300, 400], "ai": "aggro", "sight": 8, "speed": 0.34, "boss": true, "human": true, "drops": [["blackjade", 1.0, "q_chief"]]}
+ },
+ "shops": {
+  "inn":    {"name": "주막", "items": ["riceball", "pill", "tea"]},
+  "smith":  {"name": "대장간", "items": ["club0", "sword2", "dagger2", "staff2", "bell2"]},
+  "tailor": {"name": "포목점", "items": ["cap", "vest", "armor", "ring"]}
+ }
+}

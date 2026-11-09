@@ -184,7 +184,7 @@ def cave2():
     return m
 
 def camp():
-    m = Map('camp', '흑풍단 소굴', 42, 34, 'boss', tint=(0.8, 0.74, 0.74), seed=31)
+    m = Map('camp', '흑풍단 소굴', 42, 34, 'boss', tint=(0.66, 0.6, 0.66), seed=31)
     m.blob('g', 21, 15, 15, 11, 'P', 0.05)
     m.border('NNKt', 3, gaps=[(19, 31, 22, 33)])
     for x in range(6, 37):

@@ -197,7 +197,7 @@ func _entity(e: Dictionary) -> void:
 			s.hframes = 4
 			var tw := s.create_tween().set_loops()
 			tw.tween_method(func(v): s.frame = int(v) % 4, 0.0, 4.0, 0.5)
-			_light_at(s, Vector2(0, -12), Color(1, 0.6, 0.3), 1.0, 1.4)
+			_light_at(s, Vector2(0, -12), Color(1, 0.6, 0.3), 0.45, 1.1)
 			blocked[Vector2i(x, y)] = true
 		"torch":
 			var s := _sprite(Fx.tex("torch"), feet(x, y), 2)

@@ -87,6 +87,57 @@ func _run() -> void:
 					if i == 6: await shot("field_fight")
 			await wait(0.3); await shot("field_after")
 			await tap("hot1"); await wait(0.1); await shot("skill")
+		"story":
+			var p = player()
+			var talk := func(id: String):
+				Talk.npc(get_tree(), id)
+				await wait(0.3)
+				await close_dialogs()
+				await wait(0.3)
+				await close_dialogs()
+			await talk.call("captain")
+			print("q_rabbit: ", Rules.quest_state(c, "q_rabbit"))
+			# 토끼를 바로 앞에 놓고 쳐서 잡기
+			main().go_map("field", Vector2i(8, 26)); await wait(1.2)
+			p = player()
+			var w = main().world
+			for k in 5:
+				var m = preload("res://scripts/monster.gd").new()
+				m.mon = "rabbit"; m.world = w; w.ysort.add_child(m)
+				var cc: Vector2i = p.cell + Vector2i(1, 0)
+				if not w.is_free(cc): cc = w.nearest_free(cc)
+				p.facing = cc - p.cell if (cc - p.cell).length() == 1 else Vector2i(1, 0)
+				m.place(cc); w.occ[cc] = m
+				for t in 20:
+					if m.dead: break
+					if (m.cell - p.cell).length_squared() == 1: p.facing = m.cell - p.cell
+					send("attack", true); await wait(0.25); send("attack", false); await wait(0.15)
+				if k == 0: await shot("story_fight")
+			print("rabbits: ", c.quests.q_rabbit.kills, " lv ", c.lv, " gold ", c.gold)
+			main().go_map("town", Vector2i(44, 19)); await wait(1.2)
+			await talk.call("captain")
+			print("q_rabbit: ", Rules.quest_state(c, "q_rabbit"), " cap ", Rules.count(c, "cap"))
+			await talk.call("hana"); print("q_tail: ", Rules.quest_state(c, "q_tail"))
+			Rules.add_item(c, "tail", 5); await talk.call("hana"); print("q_tail: ", Rules.quest_state(c, "q_tail"))
+			while c.lv < 5: Rules.gain_exp(c, Rules.exp_need(c.lv))
+			await talk.call("elder"); print("q_job: ", Rules.quest_state(c, "q_job"))
+			await talk.call("m_mage"); print("job: ", c.job, " hot ", c.hot)
+			await talk.call("elder"); print("q_job: ", Rules.quest_state(c, "q_job"))
+			await talk.call("captain"); print("q_dogs: ", Rules.quest_state(c, "q_dogs"))
+			# 술사 불꽃
+			main().go_map("field", Vector2i(40, 8)); await wait(1.2)
+			p = player()
+			p.target = p.find_target(9)
+			await tap("hot1"); await wait(0.15); await shot("story_fire"); await wait(0.5)
+			print("fire target hp: ", p.target.hp if p.target and is_instance_valid(p.target) else "none", " mp ", c.mp)
+			# 가게
+			main().go_map("town", Vector2i(8, 15)); await wait(1.2)
+			c.gold = 100
+			await talk.call("hana")
+			await wait(0.3); await shot("story_shop")
+			await tap("talk"); await wait(0.2)
+			print("shop win: ", main().hud.win_kind, " gold ", c.gold, " riceball ", Rules.count(c, "riceball"))
+			await tap("cancel")
 		"maps":
 			for k in ["field", "forest", "cave1", "cave2", "camp"]:
 				main().go_map(k, Vector2i(-1, -1)); await wait(1.3)

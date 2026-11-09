@@ -54,13 +54,23 @@ func try_step(d: Vector2i) -> bool:
 	world.move_actor(self, cell, to)
 	cell = to
 	moving = true
-	walk_phase = 1 - walk_phase
-	var tw := create_tween()
-	tw.tween_property(self, "position", cell_pos(to), step_time)
-	tw.tween_callback(func():
-		moving = false
-		on_arrive())
 	return true
+
+## 매 프레임 목표 칸으로 미끄러지듯 이동 (도착하면 on_arrive). 남은 거리는 다음 걸음에 이어 씀.
+var walk_dist := 0.0
+func move_tick(delta: float) -> void:
+	if not moving: return
+	var goal := cell_pos(cell)
+	var sp := T / step_time
+	var step := sp * delta
+	var left := position.distance_to(goal)
+	walk_dist += minf(step, left)
+	if step >= left:
+		position = goal
+		moving = false
+		on_arrive()
+	else:
+		position = position.move_toward(goal, step)
 
 func on_arrive() -> void:
 	pass
@@ -76,7 +86,7 @@ func update_frame() -> void:
 	var now := Time.get_ticks_msec() / 1000.0
 	var col := 0
 	if now < act_until: col = act_frame
-	elif moving: col = 1 + walk_phase
+	elif moving: col = [1, 0, 2, 0][int(walk_dist / 7.0) % 4]
 	spr.frame = row * spr.hframes + col
 
 func flash(col := Color.WHITE) -> void:

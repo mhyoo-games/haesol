@@ -60,7 +60,7 @@ func update_frame() -> void:
 	spr.flip_h = facing.x < 0
 	var now := Time.get_ticks_msec() / 1000.0
 	if now < act_until: spr.frame = act_frame
-	elif moving: spr.frame = walk_phase
+	elif moving: spr.frame = int(walk_dist / 8.0) % 2
 	else: spr.frame = 0
 
 func _player() -> Node:
@@ -68,6 +68,7 @@ func _player() -> Node:
 
 func _process(delta: float) -> void:
 	if dead: return
+	move_tick(delta)
 	update_frame()
 	if Game.busy: return
 	var p := _player()

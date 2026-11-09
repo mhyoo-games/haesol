@@ -12,7 +12,7 @@ var look_key := ""
 
 func _ready() -> void:
 	add_to_group("player")
-	step_time = 0.24
+	step_time = 0.22
 	add_child(Fx.shadow(18, 6))
 	make_sprite(null)
 	wpn = Sprite2D.new()
@@ -40,6 +40,7 @@ func _now() -> float:
 	return Time.get_ticks_msec() / 1000.0
 
 func _process(delta: float) -> void:
+	move_tick(delta)
 	update_frame()
 	wpn.frame = spr.frame
 	wpn.flip_h = spr.flip_h
@@ -65,6 +66,8 @@ func _process(delta: float) -> void:
 	elif Input.is_action_pressed("down"): d = Vector2i(0, 1)
 	if d != Vector2i.ZERO and not moving and _now() >= act_until:
 		try_step(d)
+	elif d == Vector2i.ZERO and not moving:
+		walk_dist = 0.0
 	if Input.is_action_pressed("attack") and _now() >= atk_ready and not moving:
 		_attack()
 	if Input.is_action_just_pressed("talk"):
@@ -126,6 +129,14 @@ func find_target(r: int, after: Node = null) -> Node:
 
 func on_arrive() -> void:
 	check_portal()
+	# 키를 누르고 있으면 멈추지 않고 바로 다음 칸으로 (부드럽게 이어 걷기)
+	if Game.busy or moving: return
+	var d := Vector2i.ZERO
+	if Input.is_action_pressed("left"): d = Vector2i(-1, 0)
+	elif Input.is_action_pressed("right"): d = Vector2i(1, 0)
+	elif Input.is_action_pressed("up"): d = Vector2i(0, -1)
+	elif Input.is_action_pressed("down"): d = Vector2i(0, 1)
+	if d != Vector2i.ZERO: try_step(d)
 
 func check_portal() -> void:
 	var p = world.portals.get(cell)

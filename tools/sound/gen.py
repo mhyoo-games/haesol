@@ -181,6 +181,50 @@ def song2(bpm, bars, mel, chords, drums, lead='brass', bass_pat='8', arp=True, v
         if ch == 'c': place(noise(0.6, 0.12, 0.85, r=0.55), at)
     return out
 
+def guitar(dur, root, vol=0.12):
+    """찌그러뜨린 파워 코드 (근음 + 5도 + 옥타브)"""
+    parts = [tone(dur, root * k, kind='saw', vol=vol, a=0.005, d=0.05, s=0.8, r=0.03) for k in (1, 1.498, 2)]
+    out = []
+    for vals in zip(*parts):
+        v = sum(vals) * 2.2
+        out.append(math.tanh(v) * vol * 1.6)
+    return out
+
+def theme(bpm, sections, vol=1.0):
+    """여러 마디 묶음(절·후렴)을 이어 붙이는 주제곡. section = (마디 수, 멜로디, 화음들, 드럼, 기타 여부, 심벌)"""
+    beat = 60 / bpm
+    total_bars = sum(s[0] for s in sections)
+    n = int(total_bars * 4 * beat * SR); out = [0.0] * n
+    def place(part, at):
+        s0 = int(at * SR)
+        for k, v in enumerate(part): out[(s0 + k) % n] += v * vol
+    bar0 = 0
+    for (bars, mel, chords, drums, gtr, crash) in sections:
+        t0 = bar0 * 4 * beat; t = t0
+        for (f, d) in mel:
+            if f: place(brass(d * beat * 0.94, N(f), 0.21), t)
+            t += d * beat
+        for bi in range(bars):
+            ch = chords[bi % len(chords)]; at = t0 + bi * 4 * beat
+            for k in range(8):
+                f = N(ch[0])
+                place(tone(beat * 0.45, f, kind='tri', vol=0.34, r=0.03), at + k * beat / 2)
+                if gtr: place(guitar(beat * 0.42, f * 2, 0.07), at + k * beat / 2)
+            for f in ch[1:]:
+                place(tone(4 * beat, N(f), kind='sin', vol=0.045, a=0.25, d=0.3, s=0.8, r=0.3), at)
+            for k, f in enumerate([ch[1], ch[2], ch[3], ch[2]] * 4):
+                place(tone(beat * 0.2, N(f) * 2, kind='pul', vol=0.035 if gtr else 0.05, r=0.03), at + k * beat / 4)
+            if crash and bi == 0: place(noise(1.2, 0.14, 0.85, r=1.0), at)
+        steps = bars * 8
+        for k in range(steps):
+            ch_ = drums[k % len(drums)]; at = t0 + k * beat / 2
+            if ch_ in 'kK': place(tone(0.14, 130, 42, 'sin', 0.6, r=0.1), at)
+            if ch_ in 'sK': place(mix(noise(0.13, 0.28, 0.6, r=0.1), tone(0.08, 220, 140, 'tri', 0.15)), at)
+            if ch_ in 'hs.' and ch_ != '.': pass
+            if ch_ == 'h' or ch_ in 'ks': place(noise(0.03, 0.07, 0.95, r=0.02), at + (beat / 4 if ch_ != 'h' else 0))
+        bar0 += bars
+    return out
+
 def music():
     M = lambda n, d: write(os.path.join(ROOT, 'music', n + '.wav'), d)
     # 처음 화면: 힘차게 펼쳐지는 모험의 시작 (D장조, 138)
@@ -189,7 +233,23 @@ def music():
                 "A4:1 D5:.5 E5:.5 F#5:1.5 E5:.5 D5:1 E5:1 F#5:1 A5:1 D6:1.5 C#6:.5 B5:2 "
                 "G5:1 A5:.5 B5:.5 A5:1 F#5:1 E5:1 F#5:.5 E5:.5 D5:4")
     ch = [('D3', 'D4', 'F#4', 'A4'), ('B2', 'B3', 'D4', 'F#4'), ('G2', 'G3', 'B3', 'D4'), ('A2', 'A3', 'C#4', 'E4')]
-    M('title', song2(138, 16, mel, ch, 'k.hsk.hsk.hsKhsc' + 'k.hsk.hsk.hskhso'))
+    # 메인 테마: 설렘과 아련함이 섞인 90년대 애니풍 록 발라드 (D장조, 132). 직접 새로 쓴 선율.
+    IV, V, iii, vi = ('G2', 'G3', 'B3', 'D4'), ('A2', 'A3', 'C#4', 'E4'), ('F#2', 'F#3', 'A3', 'C#4'), ('B2', 'B3', 'D4', 'F#4')
+    I = ('D3', 'D4', 'F#4', 'A4')
+    verse = notes("F#4:1 A4:.5 B4:.5 A4:1 F#4:.5 E4:.5 D4:1 E4:.5 F#4:.5 A4:2 "
+                  "B4:1 A4:.5 F#4:.5 E4:1 D4:.5 E4:.5 F#4:3 -:1 "
+                  "F#4:1 A4:.5 B4:.5 D5:1 B4:.5 A4:.5 B4:1 C#5:.5 D5:.5 E5:2 "
+                  "D5:.5 C#5:.5 B4:.5 A4:.5 B4:1 C#5:1 A4:4")
+    pre = notes("B4:.5 C#5:.5 D5:1 C#5:.5 B4:.5 A4:1 F#4:1 G4:.5 A4:.5 B4:1 C#5:1 "
+                "D5:.5 E5:.5 F#5:1 E5:.5 D5:.5 C#5:1.5 A4:.5 B4:1 C#5:2")
+    chorus = notes("D5:1 E5:.5 F#5:.5 A5:1.5 F#5:.5 G5:1 F#5:.5 E5:.5 D5:1 E5:1 "
+                   "F#5:1 E5:.5 D5:.5 C#5:1 A4:1 B4:1.5 C#5:.5 D5:2 "
+                   "D5:1 E5:.5 F#5:.5 A5:1.5 B5:.5 A5:1 F#5:.5 E5:.5 F#5:1 A5:1 "
+                   "B5:1 A5:.5 F#5:.5 E5:1 F#5:.5 E5:.5 D5:4")
+    M('title', theme(132, [
+        (8, verse, [IV, V, iii, vi], 'k.h.s.h.k.k.s.h.', False, True),
+        (4, pre, [IV, V, iii, ('A2', 'A3', 'C#4', 'E4')], 'k.hsk.hsk.hsKsKs', True, False),
+        (8, chorus, [IV, V, iii, vi, IV, V, I, I], 'k.hsk.hsk.hsk.hs', True, True)]))
     # 마을: 밝고 경쾌한 장터 (G장조, 120)
     mel = notes("D5:.5 G5:.5 A5:.5 B5:1 A5:.5 G5:.5 E5:.5 D5:1 E5:.5 G5:.5 A5:1 G5:.5 E5:.5 D5:2 "
                 "B4:.5 D5:.5 E5:.5 G5:1 E5:.5 D5:.5 B4:.5 A4:1 B4:.5 D5:.5 E5:1 D5:.5 B4:.5 G4:2 "

@@ -66,6 +66,7 @@ jobs:
         run: |
           mkdir -p build/web
           godot --headless --export-release "Web" build/web/index.html
+          cp tools/web/carry.js build/web/carry.js
           ls -la build/web
           test -s build/web/index.pck
       - uses: actions/upload-pages-artifact@v3

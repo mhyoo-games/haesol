@@ -5,7 +5,7 @@
 ## 무엇인가
 
 2000년대 초 국산 온라인 RPG 감성의 2D 탑다운 RPG (지금은 혼자 하는 게임, 나중에 서버를 붙일 수 있게 구조를 나눔).
-Godot 4(GDScript), 웹으로 내보내 GitHub Pages(`https://minhyuk94.github.io/haesol/`)에 올린다.
+Godot 4(GDScript), 웹으로 내보내 GitHub Pages(`https://mhyoo-games.github.io/haesol/`, 조직 mhyoo-games)에 올린다.
 
 ## 지킬 것
 
@@ -14,6 +14,7 @@ Godot 4(GDScript), 웹으로 내보내 GitHub Pages(`https://minhyuk94.github.io
 - 게임 규칙(능력치·피해·경험치·아이템·상점·퀘스트 판정)은 `scripts/core/`에 화면과 분리해 둔다 → 나중에 서버로 옮길 수 있게. 테스트는 `tests/run_tests.gd`.
 - 데이터(직업·기술·몬스터·아이템·퀘스트·대사)는 `data/*.json`. 바꾸면 테스트가 서로 맞는지 확인한다.
 - CI(`ci.yml`): 생성기 재실행 → 테스트 → 켜지는지 → 웹 내보내기 → Pages 배포.
+- 예전 주소(`minhyuk94.github.io/…`)에서 옮겨 올 때 저장을 받아 넣는 `carry.js`(예전 주소의 안내 페이지가 `#carry=`로 보냄)를 `export_presets.cfg`의 head_include로 읽는다 (CI가 `tools/web/carry.js`를 `build/web`에 복사). 지우지 않는다.
 - 큰 기능이 바뀌면 이력서 저장소(minhyuk94.github.io)의 `games` 카드도 ko/ja/en으로 맞춘다. 소스 코드·저장소 링크는 이력서에 넣지 않는다.
 
 ## 이 작업 환경에서 돌려 보기

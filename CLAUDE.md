@@ -9,6 +9,7 @@ Godot 4(GDScript), 웹으로 내보내 GitHub Pages(`https://mhyoo-games.github.
 
 ## 지킬 것
 
+- 라이선스 화면: `scripts/licenses.gd`가 Godot 엔진(MIT)과 그 안의 라이브러리(`Engine.get_license_text/get_copyright_info/get_license_info`), 갈무리 글꼴 전문(`assets/fonts/OFL.txt`, 내보내기 `include_filter`에 넣음), 그림 출처를 보여 준다. 처음 화면에서 연다. 상업·무료 상관없이 Godot 배포 조건이라 지우지 않는다. 새 에셋을 쓰면 여기 `credits`에도 적는다.
 - 옛 온라인 RPG에서 영감을 받았지만 **새로 만든 세계관**이다. 다른 게임의 이름·캐릭터·그림·음악·지도·지명을 쓰지 않고, 다른 회사·게임 이름을 README·화면·이력서에 넣지 않는다.
 - **그림·소리·지도는 코드로 만든다.** `tools/art/`(도트 그림, 캐릭터는 몸·옷·머리 층을 따로 그려 게임에서 합침), `tools/sound/`, `tools/maps/`(→ `data/maps.json`). 결과 파일을 직접 고치지 말고 생성기를 고친다. 글꼴만 예외(갈무리, OFL).
 - 게임 규칙(능력치·피해·경험치·아이템·상점·퀘스트 판정)은 `scripts/core/`에 화면과 분리해 둔다 → 나중에 서버로 옮길 수 있게. 테스트는 `tests/run_tests.gd`.

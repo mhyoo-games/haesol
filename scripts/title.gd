@@ -30,7 +30,7 @@ func _title() -> void:
 	var sub := UI.label("— 검은 안개의 시작 —", 12, Color("cdb991"))
 	sub.size = Vector2(640, 16); sub.position = Vector2(0, 166); sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	add_child(sub)
-	items = ["새로 시작"]
+	items = ["새로 시작", "만든 것들"]
 	if Game.has_save(): items.push_front("이어하기")
 	for i in items.size():
 		var l := UI.label("", 12, UI.PAPER)
@@ -85,11 +85,16 @@ func _cycle(key: String, opts: Array, d: int) -> void:
 func _process(delta: float) -> void:
 	t += delta
 	queue_redraw()
+	if has_node("Licenses") or Time.get_ticks_msec() < lic_until:
+		return
 	if mode == "title":
 		if Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down"):
 			sel = posmod(sel + (1 if Input.is_action_just_pressed("down") else -1), items.size()); _labels(); Sound.play("select", 0.0, -6)
 		if Input.is_action_just_pressed("talk") or Input.is_action_just_pressed("attack"):
 			Sound.play("chest", 0.0, -4)
+			if items[sel] == "만든 것들":
+				_licenses()
+				return
 			if items[sel] == "이어하기" and Game.load_save():
 				set_process(false)
 				get_tree().call_group("main", "start", Game.c, false)
@@ -116,6 +121,22 @@ func _process(delta: float) -> void:
 		elif row == 4: _go()
 	if Input.is_action_just_pressed("cancel"): _title()
 	if Input.is_anything_pressed(): _create_labels()
+
+var lic_until := 0
+
+## 만든 것들·라이선스 (Godot 엔진·글꼴)
+func _licenses() -> void:
+	var l: Control = preload("res://scripts/licenses.gd").new()
+	l.credits = [
+		"해솔국 이야기 — 유민혁 (minhyuk94)",
+		"게임 엔진: Godot Engine (MIT 라이선스) — godotengine.org/license",
+		"글꼴: 갈무리 Galmuri (SIL Open Font License 1.1) — github.com/quiple/galmuri",
+		"도트 그림·지도·효과음·곡: 코드로 새로 만듦",
+	]
+	l.font_size = 12
+	l.font = Game.font
+	l.closed.connect(func(): lic_until = Time.get_ticks_msec() + 200)
+	add_child(l)
 
 func _go() -> void:
 	var nm := name_edit.text.strip_edges()

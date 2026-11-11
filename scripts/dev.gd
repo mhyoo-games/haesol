@@ -47,6 +47,9 @@ func _run() -> void:
 	await wait(0.8)
 	await shot("title")
 	var c := Rules.new_character("바람결", "m", "topknot", "black")
+	if plan == "licenses":
+		get_tree().get_first_node_in_group("main").title._licenses(); await wait(0.5); await shot("licenses")
+		get_tree().quit(); return
 	if plan == "create":
 		var t = get_tree().get_first_node_in_group("main").title
 		t._create(); await wait(0.6); await shot("create")
